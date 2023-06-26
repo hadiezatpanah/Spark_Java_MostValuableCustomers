@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation group: 'com.oracle.ojdbc', name: 'ojdbc8', version: '19.3.0.0'
+    implementation 'org.apache.kafka:kafka-clients:3.4.0'
+    implementation 'org.apache.logging.log4j:log4j:2.19.0'
+
+    // APACHE SPARK stuff ------------------
+    // Scala version (2.12) and spark version (3.3.0) must be the same between different libraries
+    implementation 'org.apache.spark:spark-core_2.12:3.3.0'
+    implementation 'org.apache.spark:spark-sql_2.12:3.3.0'
+    implementation 'org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.0'
+    implementation 'org.apache.spark:spark-avro_2.12:3.3.0'
+    implementation('org.codehaus.janino:commons-compiler'){
+        version {
+            strictly '3.0.16'
+        }
+    }
+    implementation('org.codehaus.janino:janino'){
+        version {
+            strictly '3.0.16'
+        }
+    }
+    // APACHE SPARK stuff ------------------
+
+    implementation 'com.typesafe:config:1.4.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
