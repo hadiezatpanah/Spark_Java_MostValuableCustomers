@@ -1,4 +1,4 @@
-# Gradle Spark Configuration and MemoryStream as Streaming Source
+# Gradle Spark Configuration and MemoryStream as a Streaming Source
 
 ## Context
 This Spark Java project serves as a demonstration of Gradle Spark configuration, specifically focusing on utilizing the MemoryStream class as the streaming source. While there are existing use cases on the internet showcasing the use of MemoryStream in Spark using Scala, this project showcases its implementation in Java. The project is about identifying the most valuable customers within each time window of a streaming transaction data. Additionally, the project highlights Spark's watermarking solution, which effectively handles late data, and leverages its windowing capabilities. Through this project, users can gain practical insights into employing MemoryStream and explore its application within a Java-based Spark environment.
